@@ -5,12 +5,16 @@
     var zoom = 1;
 
     var current_page = 1;
-    let per_page = 2;
+    let per_page = 20;
     let sakme_id = 1;
+
+    let api_uri = "/get-sakme-files/";
+    let api_base = "http://127.0.0.1:8000/api";
+
 
     $(document).ready(function() {
         loadResults(sakme_id, current_page, per_page);
-
+        loadLocaly()
     });
 
     // left side open close
@@ -306,6 +310,8 @@
         current_page = page;
     }
 
+
+
     // Load Thumbs
     function loadResults(sakme_id, current_page, per_page) {
         $.ajaxSetup({
@@ -313,8 +319,9 @@
                 "X-CSRF-TOKEN": jQuery('meta[name="csrf-token"]').attr("content")
             }
         });
+        // debugger
         $.ajax({
-            url: "/sakmes/view-files-per-page",
+            url: api_base+api_uri,
             type: "post",
             async: "false",
             data: {
@@ -352,6 +359,25 @@
 
             }
         });
+    };
+
+    function loadLocaly(folder, current_page, per_page){
+        let total = 0;
+        for (let i = 0; i < 10; i++) {
+            let index = i;
+            let id = i;
+            let src = `images/folder1/thumbs/Page_${i}.jpg`;
+            total += 1
+            $('#thumbs').append(
+                `<li class="img-element" id="thumb-${index}" index="${index}" elID="${id}">
+                    <img src="${src}" />
+                </li>`
+            );
+
+            updateCurrentPage(current_page + 1);
+            $('.totalCounter').html(total);
+            $('#maxImages').attr('maxImages', total);
+        }
     };
 
     // Load More Content AJAX
