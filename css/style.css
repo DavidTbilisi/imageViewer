@@ -1,0 +1,129 @@
+
+
+    #leftSide {
+        background-color: white;
+        position: fixed;
+        width: 25%;
+        left: 0;
+        overflow-y: scroll;
+        top: 0;
+        bottom: 0;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    #thumbs {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        overflow-x: hidden;
+    }
+
+    .img-element {
+        padding: 10px;
+    }
+
+    .active {
+        background-color: #ebebeb;
+    }
+
+    .img-element img {
+        height: 120px;
+    }
+
+    #indexID {
+        width: 40px;
+        border-radius: 10px;
+        border: solid 1px #b1b1b1;
+        padding-left: 10px;
+    }
+
+
+    /* CENTER */
+    .full {
+        width: 105%;
+        left: 0%;
+    }
+
+    .boxed {
+        width: 75%;
+        left: 25%;
+    }
+
+    #middleBox {
+        background-color: #252525;
+        display: grid;
+        place-items: center;
+        position: fixed;
+
+        height: 100%;
+
+    }
+
+    #content_viewer {
+        float: left;
+        width: 800px;
+        position: absolute;
+        z-index: 9;
+        cursor: move;
+    }
+
+    #content_viewer img {
+        float: left;
+    }
+
+    .singleView img {
+        width: 100%;
+    }
+
+    .bookView img {
+        width: 50%;
+    }
+
+    #footer {
+        position: absolute;
+        right: auto;
+        bottom: 50px;
+        z-index: 999;
+        place-items: center;
+    }
+
+    #header {
+        position: absolute;
+        right: auto;
+        top: 50px;
+        z-index: 999;
+        place-items: center;
+    }
+
+    .btn-outline-primary {
+        color: white;
+        border: solid 1px white;
+    }
+
+    #leftOpenClose {
+        position: absolute;
+        top: 20;
+        left: 25%;
+        background-color: white;
+        color: black;
+        font-weight: bold;
+        padding: 10px 20px 10px 20px;
+        z-index: 999;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    .scrollpane {
+        height: 600px;
+        overflow: auto;
+    }
+
+    .scrollpaneNoMore {
+        height: 600px;
+        overflow: auto;
+    }
+
+    .loading {
+        color: black;
+    }

@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+#msform {
+    text-align: center;
+    position: relative;
+    margin-top: 20px;
+}
+
+#msform fieldset .form-card {
+    background: white;
+    border: 0 none;
+    border-radius: 0px;
+    padding: 20px 40px 30px 40px;
+    box-sizing: border-box;
+    width: 94%;
+    margin: 0 3% 20px 3%;
+    position: relative;
+}
+
+#msform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+#msform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+#msform fieldset .form-card {
+    text-align: left;
+}
+
+#msform .action-button-long {
+    width: 200px;
+    background: #5cb85c;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button {
+    width: 100px;
+    background: #5cb85c;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button:hover,
+#msform .action-button:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #5cb85c;
+}
+
+#msform .action-button-long:hover,
+#msform .action-button-long:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #5cb85c;
+}
+
+#msform .action-button-previous {
+    width: 100px;
+    background: #616161;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 0px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+}
+
+#msform .action-button-previous:hover,
+#msform .action-button-previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
+}
+
+select.list-dt {
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 2px 5px 3px 5px;
+    margin: 2px;
+}
+
+select.list-dt:focus {
+    border-bottom: 2px solid skyblue;
+}
+
+.card {
+    z-index: 0;
+    border: none;
+    border-radius: 0.5rem;
+    position: relative;
+}
+
+.fs-title {
+    font-size: 25px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: lightgrey;
+    border-bottom: solid 1px #ebebeb;
+    padding-bottom: 20px;
+}
+
+#progressbar .active {
+    color: #000000;
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 25%;
+    float: left;
+    position: relative;
+}
+
+#progressbar #account:before {
+    content: "";
+}
+
+#progressbar #personal:before {
+    content: "";
+}
+
+#progressbar #payment:before {
+    content: "";
+}
+
+#progressbar #confirm:before {
+    content: "";
+}
+
+#progressbar li:before {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+    display: block;
+    font-size: 18px;
+    color: #ffffff;
+    background: lightgray;
+    border-radius: 50%;
+    margin: 0 auto 10px auto;
+    padding: 2px;
+}
+
+#progressbar li:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: lightgray;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: -1;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #5cb85c;
+}
+
+.fit-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.img-div {
+    border: 1px solid #ebebeb;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 10px 0px;
+}
+
+/* examination */
+#questionsNumbersBox {
+    min-height: 390px;
+}
+.questionSmallBox {
+    width: 45px;
+    height: 40px;
+    background-color: #ebebeb;
+    color: black;
+    margin-bottom: 5px;
+    line-height: 15px;
+    font-size: 11px;
+    outline: none;
+}
+.viewed {
+    background-color: #f7e4a6;
+    color: white;
+}
+.answered {
+    background-color: #5cb85c;
+    color: white;
+}
+.not_sure {
+    background-color: #6a5cb8;
+    color: white;
+}
+
+#questionBox {
+    padding: 30px;
+}
+
+.answerButton {
+    margin-bottom: 10px;
+    background-color: white;
+    color: black;
+    outline: none;
+    text-align: left;
+    padding: 15px 30px;
+    border: solid 1px #ebebeb;
+}
+
+#nextPrevBox {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Next, Prev, Finish Button */
+.npfButton:not(#finishButton) {
+    outline: none;
+    padding: 15px 30px;
+    border: solid 1px #ebebeb;
+    display: none;
+}
+
+table tbody tr th {
+    font-weight: none;
+}
