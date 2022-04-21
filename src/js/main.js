@@ -366,27 +366,25 @@
 
 
 
-    function loadLocally(current_page, per_page){
+    function loadLocally(current_page){
 
         let folder = $('#thumbs').data("folder")
         let total = 0;
-        for (let i = 1; i <= 10; i++) {
-            let index = i;
-            let id = i;
-            let src = `images/${folder}/thumbs/Page_${i}.jpg`;
 
+        $.getJSON(`images/${folder}/index.json`, function (data){
+            $.each(data, function() {
+                $('#thumbs').append(
+                    `<li class="img-element" id="thumb-${this.index}" index="${this.index}" elID="${this.id}">
+                      <img src="images/${folder}/thumbs/${this.src}" />
+                    </li>`
+                );
+            });
             total += 1
-
-            $('#thumbs').append(
-                `<li class="img-element" id="thumb-${index}" index="${index}" elID="${id}">
-                    <img src="${src}" />
-                </li>`
-            );
 
             updateCurrentPage(current_page + 1);
             $('.totalCounter').html(total);
             $('#maxImages').attr('maxImages', total);
-        }
+        })
     };
 
 
