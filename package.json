@@ -1,0 +1,40 @@
+{
+  "name": "imageviewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "autoprefix": "gulp autoprefix",
+    "purify": "gulp css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidTbilisi/imageViewer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidTbilisi/imageViewer/issues"
+  },
+  "homepage": "https://github.com/DavidTbilisi/imageViewer#readme",
+  "dependencies": {
+    "gulp-cli": "^2.3.0"
+  },
+  "devDependencies": {
+    "glob": "^8.0.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-util": "^3.0.8",
+    "purify-css": "^1.2.5",
+    "through2": "^4.0.2"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 1%",
+    "IE 10",
+    "Firefox > 20",
+    "Firefox ESR"
+  ]
+}

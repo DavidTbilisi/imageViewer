@@ -14,7 +14,7 @@
 
     $(document).ready(function() {
         loadResults(sakme_id, current_page, per_page);
-        loadLocaly()
+        loadLocally()
     });
 
     // left side open close
@@ -144,7 +144,9 @@
         if(zoomMethod === 'reset'){
             zoom = 1;
         }
-        $("#content_viewer").animate({ 'zoom': zoom }, 0);
+         console.log(zoom)
+
+         $("#content_viewer").animate({ 'zoom': zoom }, 0);
     });
 
     $(document).ready(function(){
@@ -157,7 +159,7 @@
 
             if(delta > 0) {
                 zoom += 0.3;
-                $("#content_viewer").animate({ 'zoom': zoom },0);
+                $("#content_viewer").animate({ 'zoom': `${zoom}%` },0);
             }
             else{
                zoom -= 0.3;
@@ -361,13 +363,20 @@
         });
     };
 
-    function loadLocaly(folder, current_page, per_page){
+
+
+
+    function loadLocally(current_page, per_page){
+
+        let folder = $('#thumbs').data("folder")
         let total = 0;
-        for (let i = 0; i < 10; i++) {
+        for (let i = 1; i <= 10; i++) {
             let index = i;
             let id = i;
-            let src = `images/folder1/thumbs/Page_${i}.jpg`;
+            let src = `images/${folder}/thumbs/Page_${i}.jpg`;
+
             total += 1
+
             $('#thumbs').append(
                 `<li class="img-element" id="thumb-${index}" index="${index}" elID="${id}">
                     <img src="${src}" />
@@ -379,6 +388,11 @@
             $('#maxImages').attr('maxImages', total);
         }
     };
+
+
+
+
+
 
     // Load More Content AJAX
     $('.scrollpane').on('scroll', function() {
